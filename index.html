@@ -1,0 +1,85 @@
+<html>
+<head>
+	<title>Looping Example</title>
+</head>
+<body>
+	<h1>List of Users</h1><hr>
+	<ul id="userList"></ul>
+
+	<script>
+		for (let i = 1; i <= 100; i++) {
+			let li = document.createElement("li");
+			let text = document.createTextNode(`User ke - ${i}`);
+			li.appendChild(text);
+			document.getElementById("userList").appendChild(li);
+		}
+	</script>
+
+<h1>Penambahan Nilai:</h1><hr>
+<ul id="nilai-list"></ul>
+
+<script>
+	let nilai = 0;
+	for (let i = 1; i <= 10; i++) {
+		nilai += 2;
+		let nilaiText = `Nilai setelah pengulangan ke-${i}: ${nilai}`;
+		let li = document.createElement('li');
+		let textNode = document.createTextNode(nilaiText);
+		li.appendChild(textNode);
+		document.getElementById('nilai-list').appendChild(li);
+	}
+</script>
+
+
+<h1>Cek Nilai Ganjil atau Genap:</h1><hr>
+	<ul id="nilai-list"></ul>
+	
+	<script>
+		for (let i = 0; i <= 20; i++) {
+			let nilaiText = `${i} adalah `;
+			if (i % 2 === 0) {
+				nilaiText += 'genap';
+			} else {
+				nilaiText += 'ganjil';
+			}
+			let li = document.createElement('li');
+			let textNode = document.createTextNode(nilaiText);
+			li.appendChild(textNode);
+			document.getElementById('nilai-list').appendChild(li);
+		}
+	</script>
+
+
+<h1>Contoh Program Confirm</h1><hr>
+
+<script>
+	let counter = 0;
+	let userConfirm = true;
+
+	while (userConfirm) {
+		userConfirm = confirm('Apakah Anda mau mengulang?');
+		if (userConfirm) {
+			counter++;
+		}
+	}
+
+	alert(`Perulangan sudah dilakukan sebanyak ${counter} kali`);
+</script>
+
+<h1>Kuis Impact Byte</h1>
+
+	<script>
+		let correctAnswer = 'Impact Byte';
+
+		let userAnswer = prompt('Sebutkan kepanjangan dari nama IB (Impact Byte)?');
+
+		while (userAnswer !== correctAnswer) {
+			userAnswer = prompt('Jawabanmu salah. Coba lagi: Sebutkan kepanjangan dari nama IB (Impact Byte)?');
+		}
+
+		alert('Selamat jawabanmu benar!');
+	</script>
+</body>
+</html>
+
+
